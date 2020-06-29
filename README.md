@@ -14,3 +14,31 @@ Trata-se de um instrumento muito utilizado em farmácias, laboratórios, almoxar
 O equipamento pode ser portátil e possui um tempo de resposta bastante baixo: em apenas alguns segundos, já é capaz de indicar a temperatura relativa do ar. 
 O sensor também contribui para que instituições possam manter as suas operações dentro das normas vigentes caso for preciso.
 
+# Componentes
+
+Os componentes utilizados nesse projeto foram:
+
+* Placa Wemos D1
+<img src="Imagens do circuito e componentes/Placa WemosD1.JPG" width="300" />
+
+* Sensor de Temperartura e Umidade de Alta Precisão HDC1080
+<img src="Imagens do circuito e componentes/Sensor HD.jpg" width="300" />
+
+* Display LCD 
+<img src="Imagens do circuito e componentes/Display LCD.jpg" width="300" />
+
+# Aplicações utilizadas
+
+Utilizamos para desenvolver o projeto e estabelecer o protocolo MQTT no projeto
+
+* Arduino IDE
+Pode ser baixada em https://www.arduino.cc/en/main/software
+* API Thingspeak
+Link do Canal do projeto : https://thingspeak.com/channels/1087000
+
+# Circuito e Montagem
+
+# Resultado
+<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1087000/charts/1?bgcolor=%23ffffff&color=%239900cc&dynamic=true&results=5&title=Medi%C3%A7%C3%A3o+de+temperatura&type=spline"></iframe>
+
+
