@@ -19,13 +19,13 @@ O sensor também contribui para que instituições possam manter as suas operaç
 Os componentes utilizados nesse projeto foram:
 
 * Placa Wemos D1
-<img src="Imagens do circuito e componentes/Placa WemosD1.JPG" width="300" />
+<img src="docs/Placa WemosD1.JPG" width="300" />
 
 * Sensor de Temperartura e Umidade de Alta Precisão HDC1080
-<img src="Imagens do circuito e componentes/Sensor HD.jpg" width="300" />
+<img src="docs/Sensor HD.jpg.jpg" width="300" />
 
 * Display LCD 
-<img src="Imagens do circuito e componentes/Display LCD.jpg" width="300" />
+<img src="docs/Display LCD.jpg" width="300" />
 
 # Aplicações utilizadas
 
@@ -37,7 +37,7 @@ Pode ser baixada em https://www.arduino.cc/en/main/software
 Link do Canal do projeto : https://thingspeak.com/channels/1087000
 
 # Circuito e Montagem
-<img src="Circuito.jpg" width="300" />
+<img src="docs/Circuito.jpg" width="300" />
 
 Conforme circuito abaixo, podemos verificar que ligamos no mesmo barramento da protoboard os pinos SDA,SCL, 5VV e GND tanto do display como no sensor
 
