@@ -22,7 +22,7 @@ Os componentes utilizados nesse projeto foram:
 <img src="docs/Placa WemosD1.JPG" width="300" />
 
 * Sensor de Temperartura e Umidade de Alta Precisão HDC1080
-<img src="docs/Sensor HD.jpg.jpg" width="300" />
+<img src="docs/Sensor HD.jpg" width="300" />
 
 * Display LCD 
 <img src="docs/Display LCD.jpg" width="300" />
@@ -37,7 +37,7 @@ Pode ser baixada em https://www.arduino.cc/en/main/software
 Link do Canal do projeto : https://thingspeak.com/channels/1087000
 
 # Circuito e Montagem
-<img src="docs/Circuito.jpg" width="300" />
+<img src="docs/Circuito.jpg" width="500" />
 
 Conforme circuito abaixo, podemos verificar que ligamos no mesmo barramento da protoboard os pinos SDA,SCL, 5VV e GND tanto do display como no sensor
 
