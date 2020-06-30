@@ -42,6 +42,31 @@ Link do Canal do projeto : https://thingspeak.com/channels/1087000
 Conforme circuito abaixo, podemos verificar que ligamos no mesmo barramento da protoboard os pinos SDA,SCL, 5VV e GND tanto do display como no sensor
 
 
+# O protocolo MQTT
+O protocolo MQTT, ou Message Queuing Telemetry Transport (MQTT) é um protocolo de mensagens destinado a sensores e outros dispositivos. Seu principal uso é fazer as máquinas trocarem informações entre elas, modalidade de comunicação conhecida como Machine-to-Machine (M2M, traduzindo para o português, de máquina para máquina). Essa tecnologia foi desenvolvida pela IBM no final dos anos 90, e sua finalidade original era conectar sensores de satélites ou pipelines de petróleo. Apesar de ter criado há um tempo, sua aplicabilidade ainda é excepcionalmente útil na atualidade, inclusive em diversos ramos empresariais.
+A comunicação entre aparelhos é assíncrona, isso significa que os dados podem ser transmitidos com intervalos em um fluxo estável. Isso ocorre porque ele utiliza um paradigma de publishers (publicadores) e subscribers (assinantes) baseado em TCP/IP, cliente e broker.
+Seu funcionamento não é tão complicado quanto parece: o publicador envia a mensagem ao broker, que enfileira e dispara as informações recebidas aos assinantes (que podem ser múltiplos aparelhos). Esses últimos recebem as mensagens que possuem interesse. O TCP/IP citado é uma forma de identificação entre os dispositivos.
+No nosso projeto, estamos adotando o paradigma publisher, isso, porque coletamos de dados para que os mesmos possam ser enviados para um broker publico. O brokler que utilizamos é a API Thingspeak, onde com ela, conseguimos demonstrar as medições de forma gráfica em um determinado período de tempo. Abaixo, temos um esquema funcional de como funciona o protocolo MQTT em nosso projeto. 
+ 
+
+O MQTT possui dois componentes: Agente MQTT, que seria é um ponto central de comunicação, nesse caso, chamamos de broker, no qual é responsavel  por despachar todas as mensagens entre os clients, e os Clientes MQTT, que são os dispositivos que se conectam ao broker, no nosso caso, o módulo ESP8266 faz essa comunicação ao enviar os dados para o API utilizada nesse projeto.
+
+
+# Resultados
+A montagem do circuito foi feita com sucesso conforme pode ser visto na figura. A precisão do sensor é tão precisa que em ambientes internos a temperatura por muitas vezes é maior, pelo fato dos ambientes serem mais quentes devido ao abafamento. Porém, quando testamos em um ambiente externo, a temperatura e a umidade relativa do ar foram medidas com sucesso.Em relação ao display, a sua instalação dentro do circuito também não foi dificil, visto que já tinhamos o o controlador HD44780 já soldado na hora da compra do componente em questão
+ 
+Referente a implantação do MQTT, a mesma foi realizada com sucesso devido a facilidade com a comunicação com a a API que possui uma boa base de documentação explicativa sobre MQTT, no qual facilitou no entendimento e conforme citado anteriormente, na construção do projeto. Outro ponto importante, é a disponibilidade de gráficos e estilização na qual podemos aplicar, isso é importante depenendo de como queremos visualizar os dados. Conforme verificdo na figura, temos as últimas medidas aferidas representadas no gráfico, como temos a informação da temperatura atual. 
+
+ 
+
+Além disso, temos a opção de representa a leitura de forma, nesse caso, usando um widget de um medidor.
+ 
+
+Além disso, a API nos disponibiliza um Código Iframe, caso, queiramos disponibilizar em algum site e também Podemos exporter no formato JSON, XML e CSV, de acordo com a nossa necessidade.
+
+ 
+Porém, tivemos alguns problemas no desenvolvimento do circuito. De ínicio, queriamos utilizar o Arduino UNO com um um módulo ESP8266, porém, tivemos dificuldades ao implantar o MQTT, devido a conexão com a pinagem que não estava muito clara paranós. Por isso, optamos por utilizar a placa Wemos D1 por já ter o módulo aclopado. Outro problema que enfrentamos é devido a fragilidade do sensor de temperatura e umidade, conforme mostrado na figura 24. Por muitas vezes, a temperatura era apresentada no seu limite máximo, assim como a umidade. 
+ 
 
 
 
