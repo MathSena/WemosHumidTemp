@@ -37,9 +37,11 @@ Pode ser baixada em https://www.arduino.cc/en/main/software
 Link do Canal do projeto : https://thingspeak.com/channels/1087000
 
 # Circuito e Montagem
+<img src="Circuito.jpg" width="300" />
 
-# Resultado
+Conforme circuito abaixo, podemos verificar que ligamos no mesmo barramento da protoboard os pinos SDA,SCL, 5VV e GND tanto do display como no sensor
 
-<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1087000/charts/1?bgcolor=%23ffffff&color=%239900cc&dynamic=true&results=5&title=Medi%C3%A7%C3%A3o+de+temperatura&type=spline"></iframe>
+
+
 
 
